@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -66,8 +67,11 @@
               "browserTarget": "RealSiteWeb:build:development"
             }
           },
-          "defaultConfiguration": "development"
-        },
+          "defaultConfiguration": "development",
+            "options": {
+              "proxyConfig": "src/proxy.conf.json"
+            }
+          },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -87,6 +91,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

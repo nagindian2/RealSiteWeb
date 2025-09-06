@@ -4,6 +4,7 @@ import { HttpClient, HttpContext, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IFileReassign } from 'src/app/model/FileReassign';
 import { IEmployee } from 'src/app/model/Employee';
+import { IBank } from 'src/app/model/IBank';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,8 @@ export class FileReassignService {
 
   getemployees(): Observable<IEmployee[]> {
     return this.http.get<IEmployee[]>(`${this.apiUrl}/?service=GetEmployeeDetails`);
+  }
+  getbanks(): Observable<IBank[]> {
+    return this.http.get<IBank[]>(`${this.apiUrl}/?service=GetBankDetails`);
   }
 }
